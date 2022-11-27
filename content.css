@@ -1,0 +1,115 @@
+:root {
+  --cloud-width: 500px;
+  --cloud-height: 250px; 
+  --cloud-bg: #f2f2f2; 
+  --cloud-inset-shadow: #ccc;
+
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cloud {
+  width: var(--cloud-width);
+  height: var(--cloud-height); 
+  background: var(--cloud-bg);
+  border-radius: 150px;
+  position: fixed;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  color: blue;
+  z-index: 999999999999; 
+  display: none; 
+  opacity: 1; 
+  padding-top: 50px; 
+  border: 1px solid #c0c0c0;
+}
+
+.cloud:after, .cloud:before {
+	content: '';
+	position: absolute;
+	background: #f2f9fe;
+	z-index: -1;
+}
+
+.cloud::before {
+  width: calc(var(--cloud-width) / 1.5);
+  height: calc(var(--cloud-width) / 1.5);
+  background: var(--cloud-bg);
+  border-radius: 50%;
+  top: calc(-1 * var(--cloud-width) / 4);
+  left: calc(var(--cloud-width) / 10);
+}
+
+.cloud::after {
+  width: calc(var(--cloud-width) / 3);
+  height: calc(var(--cloud-width) / 3);
+  background: var(--cloud-bg);
+  border-radius: 50%;
+  top: calc(-1 * var(--cloud-width) / 6);
+  right: calc(var(--cloud-width) / 6);
+}
+
+._column {
+  width: 75%;
+  height: 75%; 
+  margin: 25px auto 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+ 
+}
+._keywords__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; 
+  flex-wrap: wrap; 
+  overflow: scroll; 
+}
+
+._keywords__row > div {
+  margin: 0px 4px; 
+}
+
+._close__button {
+  cursor: pointer; 
+  width: 'fit-content';
+  background: blue; 
+  color: white;
+  border-radius: 4px; 
+  padding: 10px 16px;
+  margin-top: 8px;   
+}
+
+
+._keywordcloud__button {
+  height: 50px; 
+  width: 50px;
+  border-radius: 100%; 
+  border: 1px solid black;
+  background-color: white;
+  color: blue; 
+  cursor: pointer;
+  position: fixed; 
+  bottom: 10px; 
+  right: 30px; 
+  text-align: center;
+  z-index: 999999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+
+
+
+
+
